@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Richard Games - Juegos Gratis para PC</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap">
+    <style>
+        /* Estilos generales */
+        body {
+            font-family: 'Orbitron', sans-serif;
+            background-color: #1a1a1a; /* Fondo negro */
+            color: #ffffff; /* Texto blanco */
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+        }
+
+        /* Fondo desenfocado */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('https://i.imgur.com/3QZQZQZ.png') no-repeat center center/cover; /* Cambia la URL por tu imagen de fondo */
+            filter: blur(10px); /* Desenfoque */
+            z-index: -1;
+        }
+
+        a {
+            text-decoration: none;
+            color: #ffffff; /* Texto blanco */
+        }
+
+        /* Encabezado */
+        .encabezado {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background-color: rgba(13, 13, 13, 0.8); /* Fondo negro oscuro con transparencia */
+            border-bottom: 4px solid #8a2be2; /* Borde morado */
+            backdrop-filter: blur(5px); /* Desenfoque en el encabezado */
+        }
+
+        .encabezado img {
+            width: 100px;
+            animation: float 3s ease-in-out infinite;
+        }
+
+        .inicio {
+            font-size: 1.8em;
+            margin-left: 10px;
+            color: #ff0000; /* Texto rojo */
+            transition: color 0.3s ease;
+        }
+
+        .inicio:hover {
+            color: #8a2be2; /* Morado al hacer hover */
+        }
+
+        .dmca {
+            font-size: 1.2em;
+            padding: 10px 20px;
+            border: 2px solid #8a2be2; /* Borde morado */
+            border-radius: 5px;
+            color: #ffffff; /* Texto blanco */
+            background-color: #ff0000; /* Fondo rojo */
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        .dmca:hover {
+            background-color: #8a2be2; /* Fondo morado al hacer hover */
+            color: #ffffff; /* Texto blanco */
+        }
+
+        /* Contenedor de juegos */
+        .game-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 20px;
+            backdrop-filter: blur(5px); /* Desenfoque en el contenedor de juegos */
+        }
+
+        .game-item {
+            width: 200px;
+            margin: 15px;
+            text-align: center;
+            background-color: rgba(13, 13, 13, 0.8); /* Fondo negro oscuro con transparencia */
+            border: 2px solid #8a2be2; /* Borde morado */
+            border-radius: 10px;
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .game-item:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 20px #8a2be2; /* Sombra morada */
+        }
+
+        .game-item img {
+            width: 100%;
+            height: auto;
+            border-bottom: 2px solid #8a2be2; /* Borde morado */
+        }
+
+        .game-name {
+            padding: 10px;
+            font-size: 1em;
+            background-color: rgba(26, 26, 26, 0.8); /* Fondo negro con transparencia */
+            color: #ffffff; /* Texto blanco */
+            margin: 0;
+        }
+
+        /* Animaciones */
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+
+        @keyframes glow {
+            0%, 100% {
+                text-shadow: 0 0 5px #8a2be2, 0 0 10px #8a2be2, 0 0 20px #8a2be2; /* Brillo morado */
+            }
+            50% {
+                text-shadow: 0 0 10px #ff0000, 0 0 20px #ff0000, 0 0 30px #ff0000; /* Brillo rojo */
+            }
+        }
+
+        /* Pie de página */
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: rgba(13, 13, 13, 0.8); /* Fondo negro oscuro con transparencia */
+            border-top: 4px solid #8a2be2; /* Borde morado */
+            margin-top: 20px;
+            backdrop-filter: blur(5px); /* Desenfoque en el pie de página */
+        }
+
+        footer p {
+            margin: 0;
+            font-size: 1.2em;
+            color: #ffffff; /* Texto blanco */
+            animation: glow 2s infinite;
+        }
+
+        /* Enlaces de GitHub Pages */
+        .github-links {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .github-links a {
+            margin: 0 10px;
+            font-size: 1.2em;
+            color: #8a2be2; /* Morado */
+            transition: color 0.3s ease;
+        }
+
+        .github-links a:hover {
+            color: #ff0000; /* Rojo al hacer hover */
+        }
+    </style>
+</head>
+<body>
+    <!-- Encabezado -->
+    <div class="encabezado">
+        <a href="./index.php" style="display: flex; align-items: center;">
+            <img src="https://i.imgur.com/3QZQZQZ.png" alt="Richard Games Logo"> <!-- Cambia la URL por la de tu logo -->
+            <span class="inicio">RICHARD GAMES</span>
+        </a>
+        <a class="dmca" href="DMCA.php">DMCA</a>
+    </div>
+
+    <!-- Anuncio -->
+    <div style="text-align: center; margin: 20px 0;">
+        <script type="text/javascript">
+            atOptions = {
+                'key' : '08dedda8a08b628a18b48612cff4a6e1',
+                'format' : 'iframe',
+                'height' : 90,
+                'width' : 728,
+                'params' : {}
+            };
+        </script>
+        <script type="text/javascript" src="//luckilygelatine.com/08dedda8a08b628a18b48612cff4a6e1/invoke.js"></script>
+    </div>
+
+    <!-- Contador de juegos -->
+    <p class="total_games" style="text-align: center; font-size: 1.5em; animation: glow 2s infinite;">Juegos Totales: 10</p>
+
+    <!-- Lista de juegos -->
+    <div class="game-container">
+        <!-- Juego 1 -->
+        <div class="game-item">
+            <a href="games.php?games=1">
+                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgeB2a8wF7lWUQZC8FOE8SntTjJ3OVcFW6WtG40GsQmVpWPDfc21kKzeTy8FGT1uIl3k0RTlW0VuJFjy7RofCKASbnyz9eX6z2PhHBNoF6jeyyhjBuq6J_m84FYbmNwXinSRLtFSUVN4jjy-I5debTYUTVkGcFjrmP3AbQPzirHC63Xnzr8T6ceTuL25ug_/s700/7%20days%20to%20die%20portada.jpg" alt="7 Days to Die">
+                <p class="game-name">7 Days to Die</p>
+            </a>
+        </div>
+
+        <!-- Juego 2 -->
+        <div class="game-item">
+            <a href="games.php?games=2">
+                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgzCWTzwxiqYvsvwD96kFGdPdUJJJ3Ew6c3dB7O5ZdamyNgh6BwDH9NIIEe52ypoXbipbnlH3ErYF2pJRL5kM8PV3dF21O1FQNrPF3uiXbBD05UqMLht1Gy4HG9agcI_82zCI8P8o_QzLCOmG4AYNYp_D79ygQxdUXT97Hs2ErNfI_z89RPFT18rKCjdwEQ/s700/60%20seconds%20Portada.jpg" alt="60 Seconds + 60 Seconds Reatomized">
+                <p class="game-name">60 Seconds + 60 Seconds Reatomized</p>
+            </a>
+        </div>
+
+        <!-- Juego 3 -->
+        <div class="game-item">
+            <a href="games.php?games=3">
+                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh8S8rlGhbvZod3pcrSjdj0mEhIoakB_sVD8s7P7mHHwPAmOXS3DRnis2wmpxokeRRf-xjCvvK-fgpsR-Pyp_Da0ehXUWCyC7xiQ-P13taCJeez6aIOrY7pAX1JKE4X3kk_ZBgpiZoU9W9rdjydyi4mb0mEQ153Znf4WQP63kAp5dM0VoaLbZnKaJ8qPLfz/s700/American%20truck%20Simulator%20Portada.jpg" alt="American Truck Simulator">
+                <p class="game-name">American Truck Simulator</p>
+            </a>
+        </div>
+
+        <!-- Juego 4 -->
+        <div class="game-item">
+            <a href="games.php?games=4">
+                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhOWv33h7S-Z7UEtLq15bbhNbiI10RjCDKSqcT4lCBiSdkh95AbDJJd298feBHDKGOOM6eNoolBiw15IMc2xpBTw9exZ2qMswgcrF4qu9j714O4LpnZNocJVDi3TE8HLzMlysftNTmRKoBec6gY4dizmciBPxEbqXcZffdNX0N2JXshQLbRslFSBmEB2owa/s700/Assassins%20Creed%20Directors%20Cut%20Portada.jpg" alt="Assassins Creed Directors Cut">
+                <p class="game-name">Assassins Creed Directors Cut</p>
+            </a>
+        </div>
+
+        <!-- Juego 5 -->
+        <div class="game-item">
+            <a href="games.php?games=5">
+                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhlqwiXLOW5tackuzZoDCCShOLK6Jma2DP_IX5E-OUJTKTlzIDRBXTyRXkYpfYfXbKDaO0wgtH28_VzSWOXls49uTIDoaF8-NxoWB2ewL5d5Sb8hKPSZFJPG2w1LT3qEljZ8OMAxkIzkM8EILKwDfUmqkFQfbjuzdZoJ7u0Mk_VlH08WS7o-D8nbwulZg4p/s700/Assassins%20Creed%20IV%20Black%20Flag%20Portada.jpg" alt="Assassins Creed IV Black Flag">
+                <p class="game-name">Assassins Creed IV Black Flag</p>
+            </a>
+        </div>
+
+        <!-- Juego 6 -->
+        <div class="game-item">
+            <a href="games.php?games=6">
+                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhhx68EBKcfD9zuzcwIm7vVOAimgzfyTUn6kFz-OV8VthYfKVnpFuJ_A3-4qPFJ3fOfA0xKPbf4523KMEoiGG1tYd62mN7T3rHee8z2s6_eQVOdhjHElQWobnVKbWk9aB5supqrtR1d6KL8sD0VMYXYOP0xNSSoSskZECCbprvBjfQzOWqCiOLst7o0gaks/s700/Battlefield%202%20Complete%20Edition%20Portada.jpg" alt="Battlefield 2 Complete Collection">
+                <p class="game-name">Battlefield 2 Complete Collection</p>
+            </a>
+        </div>
+
+        <!-- Juego 7 -->
+        <div class="game-item">
+            <a href="games.php?games=7">
+                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgcKACaYbW8F__dusIXO4BVz6KrIfd7tqLQJBj5Sd4NQInNtvahCWQgiwUDUXIRWY7ZmvA8USWb1c8XGG-BQCuREetCVfmmxeoXHXHcz-eerH4OFMD-Rop_o0gJiaoWtNWqlsr790-9S6cGFDX4PKnRF7iaUK2bN4xRtfPncz2dwcs_F6xXbuWashR8I0L5/s700/Bad%20Company%20Portada.jpg" alt="Battlefield Bad Company 2">
+                <p class="game-name">Battlefield Bad Company 2</p>
+            </a>
+        </div>
+
+        <!-- Juego 8 -->
+        <div class="game-item">
+            <a href="games.php?games=8">
+                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiQQ8IY58quDWdCyW_RiI7b8QlLL2J1_9WxnxVCzzIm6sV6wmMs-_nBMjIeoMnRLnLxJteRiKOyEwIyL83bUvhu2yvG_0H8doKQQK0fesBV-8nNfvf6RQzSbcF5iWnoL2nEyab_c2RoCGnz9DlHkJFXm-Xov5LIZPAc3Yd9o4xLfJBuHAOZ1NbYxpO_Ey4-/s700/Battlefield%20Vietnam%20Portada.jpg" alt="Battlefield Vietnam">
+                <p class="game-name">Battlefield Vietnam</p>
+            </a>
+        </div>
+
+        <!-- Juego 9 -->
+        <div class="game-item">
+            <a href="games.php?games=9">
+                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhQhLTA3vPDmueTNXhjtFINI2HdTjeGN-C6r1A1nNlcq-r6QQ042VseVyNb_9eJO7UU0GbIz_JYfhUVFLJ1cjJ-l0VTDgG9BbEF0HSe7584RQiBs08Vg4_3Yo-n_1pbiCwLjFfhiIjnlezN5KXpUh9LBCsXWS9_qz3aSKFePhyphenhyphen1ewXpp9xOcu0Ec676psdC/s700/Buckshot%20Roulette%20Portada.jpg" alt="Buckshot Roulette">
+                <p class="game-name">Buckshot Roulette</p>
+            </a>
+        </div>
+
+        <!-- Juego 10 -->
+        <div class="game-item">
+            <a href="games.php?games=10">
+                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgR8OFwjNe_WbbZhKWdwcG5rfr2cKW-OAtvfxcofbNzpAxyfqH8jZOSsI0kb_1kB0xTQ13dTtoMWulYE7bh
