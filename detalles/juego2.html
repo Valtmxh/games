@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>60 Seconds + 60 Seconds Reatomized - Detalles</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap">
+    <style>
+        /* Estilos generales */
+        body {
+            font-family: 'Orbitron', sans-serif;
+            background-color: #1a1a1a;
+            color: #ffffff;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+        }
+
+        /* Fondo desenfocado */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('https://i.imgur.com/3QZQZQZ.png') no-repeat center center/cover;
+            filter: blur(10px);
+            z-index: -1;
+        }
+
+        .detalles-container {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: rgba(13, 13, 13, 0.8);
+            border: 2px solid #8a2be2;
+            border-radius: 10px;
+            backdrop-filter: blur(5px);
+        }
+
+        .detalles-container h1 {
+            text-align: center;
+            color: #8a2be2;
+            animation: glow 2s infinite;
+        }
+
+        .detalles-container img {
+            width: 100%;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+
+        .detalles-container p {
+            font-size: 1.2em;
+            line-height: 1.6;
+        }
+
+        .detalles-container a {
+            display: inline-block;
+            margin: 10px 0;
+            padding: 10px 20px;
+            background-color: #8a2be2;
+            color: #ffffff;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .detalles-container a:hover {
+            background-color: #ff0000;
+        }
+
+        @keyframes glow {
+            0%, 100% {
+                text-shadow: 0 0 5px #8a2be2, 0 0 10px #8a2be2, 0 0 20px #8a2be2;
+            }
+            50% {
+                text-shadow: 0 0 10px #ff0000, 0 0 20px #ff0000, 0 0 30px #ff0000;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="detalles-container">
+        <h1>60 Seconds + 60 Seconds Reatomized</h1>
+        <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgzCWTzwxiqYvsvwD96kFGdPdUJJJ3Ew6c3dB7O5ZdamyNgh6BwDH9NIIEe52ypoXbipbnlH3ErYF2pJRL5kM8PV3dF21O1FQNrPF3uiXbBD05UqMLht1Gy4HG9agcI_82zCI8P8o_QzLCOmG4AYNYp_D79ygQxdUXT97Hs2ErNfI_z89RPFT18rKCjdwEQ/s700/60%20seconds%20Portada.jpg" alt="60 Seconds + 60 Seconds Reatomized">
+        <p><strong>Fecha de salida:</strong> 25 de mayo de 2015</p>
+        <p><strong>Peso:</strong> 1.5 GB</p>
+        <p><strong>Descripción:</strong> 60 Seconds es un juego de supervivencia oscuro y cómico en el que debes prepararte para un apocalipsis nuclear. Reúne suministros, rescata a tu familia y sobrevive en un refugio subterráneo.</p>
+        <p><strong>Imágenes adicionales:</strong></p>
+        <div style="display: flex; gap: 10px;">
+            <img src="https://i.imgur.com/imagen3.jpg" alt="Imagen 3" style="width: 200px;">
+            <img src="https://i.imgur.com/imagen4.jpg" alt="Imagen 4" style="width: 200px;">
+        </div>
+        <p><strong>Enlaces de descarga:</strong></p>
+        <a href="https://enlace-directo.com/juego2" target="_blank">Descarga Directa</a>
+        <a href="https://acortador.com/juego2" target="_blank">Descarga con Acortador</a>
+        <a href="../index.html">Volver a la lista de juegos</a>
+    </div>
+</body>
+</html>
